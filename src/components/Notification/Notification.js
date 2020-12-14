@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import styles from "./Notification.module.css";
 
-export default class Notification extends Component {
-  render() {
-    return <p className={styles.notification}>You haven't contacts</p>;
-  }
-}
+const Notification = () => {
+  return <p className={styles.notification}>You haven't contacts</p>;
+};
+
+export default Notification;

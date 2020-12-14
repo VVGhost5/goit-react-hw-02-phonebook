@@ -22,14 +22,14 @@ export default class App extends Component {
   };
 
   addContact = (name, number) => {
-    const { contacts } = this.state;
     const contactData = {
       id: uuidv4(),
       name: name,
       number: number,
     };
-    contacts.push(contactData);
-    this.setState({ contacts: contacts });
+    this.setState((prevState) => ({
+      contacts: [contactData, ...prevState.contacts],
+    }));
   };
 
   deleteContact = (id) => {
